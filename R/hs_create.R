@@ -96,8 +96,10 @@ hs_create_results <- function(hs_create_response) {
 
 # Input validation ----
 
-# Check locally if the token is a 37-character string
+# Check locally if the token is a 48-character string & begins with "6879-"
 is_valid_token <- function(token) {
-  #if(nchar(token) != 37)
-    #stop(token, " should be a 37-character string. See https://hypothes.is/profile/developer to generate your own token.")
+  if(nchar(token) != 48)
+    stop(token, " should be a 48-character string. See https://hypothes.is/profile/developer to generate your own token.")
+  if(substring(token,1,5) != "6879-")
+    stop(token, " should begin with \"6879-\". See https://hypothes.is/profile/developer to generate your own token.")
 }
