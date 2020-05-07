@@ -98,6 +98,6 @@ hs_create_results <- function(hs_create_response) {
 
 # Check locally if the token is a 37-character string
 is_valid_token <- function(token) {
-  if(nchar(token) != 37)
-    stop(token, " should be a 37-character string. See https://hypothes.is/profile/developer to generate your own token.")
+  #if(nchar(token) != 37)
+    #stop(token, " should be a 37-character string. See https://hypothes.is/profile/developer to generate your own token.")
 }
